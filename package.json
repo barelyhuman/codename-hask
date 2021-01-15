@@ -15,9 +15,9 @@
   },
   "private": true,
   "scripts": {
-    "appone:ios": "yarn workspace AppOne run ios",
-    "appone:android": "yarn workspace AppOne run android",
-    "appone:start": "yarn workspace AppOne run start"
+    "mobile:ios": "yarn workspace hask run ios",
+    "mobile:android": "yarn workspace hask run android",
+    "mobile:start": "yarn workspace hask run start"
   },
   "author": "",
   "license": "MIT",
