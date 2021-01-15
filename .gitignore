@@ -240,3 +240,8 @@ output.json
 
 # Replacement of .externalNativeBuild directories introduced
 # with Android Studio 3.5.
+
+# Ignored dynamic assets
+packages/hask/android/app/src/main/assets/index.android.bundle
+packages/hask/android/app/src/main/res/raw/__node_modules_morewords_words.json
+packages/hask/android/app/src/main/res/raw/app.json

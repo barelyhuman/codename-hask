@@ -17,7 +17,8 @@
   "scripts": {
     "mobile:ios": "yarn workspace hask run ios",
     "mobile:android": "yarn workspace hask run android",
-    "mobile:start": "yarn workspace hask run start"
+    "mobile:start": "yarn workspace hask run start",
+    "mobile:android:package:debug":"yarn workspace hask run android:package:debug"
   },
   "author": "",
   "license": "MIT",
