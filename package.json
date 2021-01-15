@@ -1,0 +1,28 @@
+{
+  "name": "acme",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/react",
+      "**/react/**",
+      "**/react-native",
+      "**/react-native/**"
+    ]
+  },
+  "private": true,
+  "scripts": {
+    "appone:ios": "yarn workspace AppOne run ios",
+    "appone:android": "yarn workspace AppOne run android",
+    "appone:start": "yarn workspace AppOne run start"
+  },
+  "author": "",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "styled-components": "^5.2.1"
+  }
+}
