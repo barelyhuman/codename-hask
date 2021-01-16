@@ -10,12 +10,7 @@ workflows:
                 XCODE_SCHEME: "hask"
             node: latest
         scripts:
-            - npm install
-            - echo "sdk.dir=$HOME/programs/android-sdk-macosx" > "$FCI_BUILD_DIR/android/local.properties"
-            - |
-                # build Android
-                cd packages/hask/android
-                ./gradlew assembleDebug
+            - yarn install
             - |
                 # build iOS
                 cd packages/hask/ios
