@@ -1,0 +1,5 @@
+const STORAGECONSTANTS = {
+  AUTHTOKEN: 'AUTHTOKEN',
+};
+
+export default STORAGECONSTANTS;
