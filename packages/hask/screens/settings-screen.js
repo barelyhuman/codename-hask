@@ -27,8 +27,10 @@ export default SettingsScreen;
 SettingsScreen.options = {
   topBar: {
     title: {
-      text: 'Login',
+      text: 'Settings',
     },
+    visible:false,
+    height:0
   },
   bottomTab: {
     text: 'Settings',

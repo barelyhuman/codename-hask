@@ -76,6 +76,8 @@ ChatListScreen.options = {
     title: {
       text: 'Chats',
     },
+    visible:false,
+    height:0
   },
   bottomTab: {
     text: 'Chats',
