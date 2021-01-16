@@ -1,4 +1,4 @@
-package com.appone;
+package im.reaper.hask;
 
 import com.reactnativenavigation.NavigationActivity;
 

@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.appone"
+        applicationId "im.reaper.hask"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
