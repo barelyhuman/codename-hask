@@ -25,7 +25,7 @@ jobs:
         run: | 
           apt update
           apt install wget curl -y
-          curl -s https://api.github.com/repos/barelyhuman/commitlog/releases/latest \
+          curl -s https://api.github.com/repos/barelyhuman/commitlog/releases/36377984 \
           | grep browser_download_url \
           | grep linux-amd64 \
           | cut -d '"' -f 4 \
