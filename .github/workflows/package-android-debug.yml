@@ -13,6 +13,8 @@ jobs:
     container:
       image: docker://fabernovel/android:api-29-v1.1.0
     steps:
+      - name: Install Yarn 
+        run: npm install -g yarn && yarn install
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
