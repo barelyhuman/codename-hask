@@ -22,7 +22,7 @@ git init
 yarn install 
 
 # Current Scripts
-yarn appone:start # start the metro server
-yarn appone:ios # start the ios version 
-yarn appone:android # start the android version 
+yarn mobile:start # start the metro server
+yarn mobile:ios # start the ios version 
+yarn mobile:android # start the android version 
 ```

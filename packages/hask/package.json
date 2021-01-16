@@ -11,6 +11,7 @@
     "android:package:debug": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && cd android && ./gradlew assembleDebug"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.13.2",
     "acronym": "^1.0.0",
     "components": "1.0.0",
     "lib": "1.0.0",
