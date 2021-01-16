@@ -20,17 +20,28 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: npm install -g yarn && yarn install
 
+      - name: Changelog Generator
+        run: | 
+        curl -s https://api.github.com/repos/barelyhuman/commitlog/releases/latest \
+          | grep browser_download_url \
+          | grep linux-amd64 \
+          | cut -d '"' -f 4 \
+          | wget -qi -
+          tar -xvzf commitlog-linux-amd64.tar.gz
+          chmod +x commitlog 
+          ./commitlog . > CHANGELOG.txt
+
       - name: Build APP
         run: |
           mkdir -p packages/hask/android/app/src/main/assets
           npx jetifier
           yarn mobile:android:package:debug
-        
+          mv packages/hask/android/app/build/outputs/apk/debug/app-debug.apk packages/hask/android/app/build/outputs/apk/debug/hask-developer.apk
 
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
-#           body_path: CHANGELOG.txt
+          body_path: CHANGELOG.txt
           files: 'packages/hask/android/app/build/outputs/apk/**/*.apk'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
