@@ -22,9 +22,9 @@ jobs:
 
       - name: Build APP
         run: |
-        mkdir -p packages/hask/android/app/src/main/assets
-        npx jetifier
-        yarn mobile:android:package:debug
+          mkdir -p packages/hask/android/app/src/main/assets
+          npx jetifier
+          yarn mobile:android:package:debug
         
 
       - name: Release
