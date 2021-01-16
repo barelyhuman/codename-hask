@@ -13,15 +13,16 @@ jobs:
     container:
       image: docker://fabernovel/android:api-29-v1.1.0
     steps:
-      - name: Install Yarn 
-        run: npm install -g yarn && yarn install
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
           registry-url: https://registry.npmjs.org/
-      - run: npx jetifier && yarn mobile:android:package:debug
+      - run: npm install -g yarn && yarn install
 
+      - name: Build APP
+        run: npx jetifier && yarn mobile:android:package:debug
+        
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
