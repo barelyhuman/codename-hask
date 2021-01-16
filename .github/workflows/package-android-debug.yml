@@ -22,6 +22,8 @@ jobs:
 
       - name: Changelog Generator
         run: | 
+          sudo apt update
+          sudo apt install wget curl -y
           curl -s https://api.github.com/repos/barelyhuman/commitlog/releases/latest \
           | grep browser_download_url \
           | grep linux-amd64 \
