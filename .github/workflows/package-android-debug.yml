@@ -21,8 +21,12 @@ jobs:
       - run: npm install -g yarn && yarn install
 
       - name: Build APP
-        run: npx jetifier && yarn mobile:android:package:debug
+        run: |
+        mkdir -p packages/hask/android/app/src/main/assets
+        npx jetifier
+        yarn mobile:android:package:debug
         
+
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
