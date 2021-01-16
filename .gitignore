@@ -245,3 +245,4 @@ output.json
 packages/hask/android/app/src/main/assets/index.android.bundle
 packages/hask/android/app/src/main/res/raw/__node_modules_morewords_words.json
 packages/hask/android/app/src/main/res/raw/app.json
+packages/hask/android/app/src/main/res/raw/__node_modules_csscolorkeywords_colors.json
